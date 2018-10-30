@@ -74,7 +74,7 @@ function draw(gd, titleClass, options) {
 
     var opacity = 1;
     var isplaceholder = false;
-    var txt = (cont.title || '').trim();
+    var txt = (cont.title.text || '').trim();
 
     // only make this title editable if we positively identify its property
     // as one that has editing enabled.
