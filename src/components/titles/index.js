@@ -67,10 +67,10 @@ function draw(gd, titleClass, options) {
     var group = options.containerGroup;
 
     var fullLayout = gd._fullLayout;
-    var titlefont = cont.titlefont || {};
-    var font = titlefont.family;
-    var fontSize = titlefont.size;
-    var fontColor = titlefont.color;
+    var font = cont.title.font || {};
+    var fontFamily = font.family;
+    var fontSize = font.size;
+    var fontColor = font.color;
 
     var opacity = 1;
     var isplaceholder = false;
@@ -137,7 +137,7 @@ function draw(gd, titleClass, options) {
         titleEl.attr('transform', transformVal);
 
         titleEl.style({
-            'font-family': font,
+            'font-family': fontFamily,
             'font-size': d3.round(fontSize, 2) + 'px',
             fill: Color.rgb(fontColor),
             opacity: opacity * Color.opacity(fontColor),
